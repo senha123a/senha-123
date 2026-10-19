@@ -1,0 +1,136 @@
+
+body {
+  margin: 0;
+  background: #1b0a13;
+  color: #fff5f8;
+  font-family: 'Poppins', sans-serif;
+}
+
+.video-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 5, 16, 0.45),
+    rgba(25, 5, 16, 0.82)
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.hero h1,
+.message h2,
+.gallery-section h2,
+.final-message h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ffb6d0;
+}
+
+.hero h1 {
+  font-size: clamp(60px, 10vw, 100px);
+  margin: 15px 0;
+}
+
+.eyebrow {
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #ffb6d0;
+}
+
+.subtitle {
+  line-height: 2;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 13px 25px;
+  border: 1px solid #ffb6d0;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #ffb6d0;
+  color: #321020;
+}
+
+.message,
+.final-message {
+  padding: 90px 20px;
+  text-align: center;
+  background: rgba(31, 8, 20, .72);
+}
+
+.message p,
+.final-message p {
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 2;
+}
+
+.gallery-section {
+  padding: 80px 7%;
+  text-align: center;
+  background: rgba(31, 8, 20, .88);
+}
+
+.gallery {
+  max-width: 1100px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.photo-card {
+  padding: 12px;
+  border: 1px solid #75405b;
+  border-radius: 16px;
+  background: rgba(80, 25, 50, .7);
+  overflow: hidden;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 542px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.photo-card p {
+  line-height: 1.7;
+  padding: 8px;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card img {
+    height: 280px;
+  }
+}
